@@ -26,8 +26,9 @@ export default function SignUp() {
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs">
+    <div className="hero min-h-screen bg-base-200" data-theme="light">
+      {" "}
+      <Container component="main" maxWidth="xs" data-theme="light">
         <CssBaseline />
         <Box
           sx={{
@@ -119,6 +120,6 @@ export default function SignUp() {
           </Box>
         </Box>
       </Container>
-    </ThemeProvider>
+    </div>
   );
 }

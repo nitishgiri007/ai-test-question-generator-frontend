@@ -2,7 +2,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Navigation from "./components/dashboard/navbar/navigation";
 import Content from "./components/dashboard/content/content";
 import FooterPage from "./components/dashboard/footer/footer";
-import SignUp from "./components/signuUP/signupComponst";
+import SignUp from "./components/signuUP/signupComponent";
 
 const Layout = () => {
   return (

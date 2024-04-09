@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation,useNavigate  } from "react-router-dom";
+import {  useNavigate  } from "react-router-dom";
 
 const Navigation = () => {
   const [isLogin, setIsLogin] = useState(false);
@@ -7,13 +7,16 @@ const Navigation = () => {
   const navigate = useNavigate();
 
   const handleOnClick = (e) => {
+    navigate("/");
+  };
+  const handleOnSignupClick = (e) => {
     navigate("/signup");
   };
 
   return (
     <div className="navbar bg-base-100 " data-theme="dracula">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">T-Gen</a>
+        <a className="btn btn-ghost text-xl" onClick={handleOnClick}>T-Gen</a>
       </div>
       <div className="flex-none">
         {isLogin ? (
@@ -50,7 +53,7 @@ const Navigation = () => {
           </div>
         ) : (
           <div>
-            <button className="btn btn-ghost" onClick={(e)=>handleOnClick(e)}>
+            <button className="btn btn-ghost" onClick={(e)=>handleOnSignupClick(e)}>
               Login/Signup
             </button>
           </div>

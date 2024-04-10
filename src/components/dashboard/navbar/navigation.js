@@ -1,14 +1,10 @@
-import React, { useState } from "react";
-import {  useNavigate  } from "react-router-dom";
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navigation = () => {
-  const [isLogin, setIsLogin] = useState(false);
- 
+  const isLogin = false;
   const navigate = useNavigate();
 
-  const handleOnClick = (e) => {
-    navigate("/");
-  };
   const handleOnSignupClick = (e) => {
     navigate("/signup");
   };
@@ -16,7 +12,7 @@ const Navigation = () => {
   return (
     <div className="navbar bg-base-100 " data-theme="dracula">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl" onClick={handleOnClick}>T-Gen</a>
+        <Link to="/" className="btn btn-ghost text-xl">T-Gen</Link>
       </div>
       <div className="flex-none">
         {isLogin ? (
@@ -38,16 +34,16 @@ const Navigation = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a className="justify-between">
+                <Link to="/profile" className="justify-between">
                   Profile
                   <span className="badge">New</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a>Settings</a>
+                <Link to="/settings">Settings</Link>
               </li>
               <li>
-                <a>Logout</a>
+                <Link to="/logout">Logout</Link>
               </li>
             </ul>
           </div>

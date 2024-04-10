@@ -16,6 +16,7 @@ import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 
 // Yup schema for validation
+
 const schema = Yup.object().shape({
   firstName: Yup.string().required("First Name is required"),
   lastName: Yup.string().required("Last Name is required"),
